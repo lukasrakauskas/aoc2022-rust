@@ -31,8 +31,6 @@ fn main() -> Result<(), ()> {
         let new_line = line.replace(" ", "");
         let (them, me) = new_line.split_at(1);
 
-        println!("{}-{}", them, me);
-
         let replace = replace_map.get(me);
 
         if replace.is_none() {
