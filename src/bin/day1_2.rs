@@ -1,7 +1,7 @@
 use std::vec;
 
-fn main() {
-    let input = include_str!("./sample.txt");
+fn main() -> Result<(), ()> {
+    let input = include_str!("day1.sample");
     let lines = input.split("\r\n");
 
     let mut sum = 0;
@@ -22,5 +22,6 @@ fn main() {
 
     totals.sort_by(|a, b| b.cmp(a));
 
-    println!("Calories: {:?}", totals[0..3].iter().sum::<i32>())
+    println!("Calories: {:?}", totals[0..3].iter().sum::<i32>());
+    Ok(())
 }

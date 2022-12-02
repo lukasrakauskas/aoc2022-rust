@@ -1,5 +1,5 @@
-fn main() {
-    let input = include_str!("./sample.txt");
+fn main() -> Result<(), ()> {
+    let input = include_str!("day1.sample");
     let lines = input.split("\r\n");
 
     let mut max = 0;
@@ -21,5 +21,6 @@ fn main() {
         sum = 0;
     }
 
-    println!("Max calories: {:?}", max)
+    println!("Max calories: {:?}", max);
+    Ok(())
 }
